@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Linux(Centos7)安装jdk1.8 | 李享的中文印记</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/blogs/favicon.ico">
+    <meta name="description" content="一款简洁而优雅的博客文章">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/blogs/assets/css/0.styles.fec45b68.css" as="style"><link rel="preload" href="/blogs/assets/js/app.b55c9fd1.js" as="script"><link rel="preload" href="/blogs/assets/js/3.768e4e98.js" as="script"><link rel="preload" href="/blogs/assets/js/1.a77d753a.js" as="script"><link rel="preload" href="/blogs/assets/js/18.8b0d4994.js" as="script"><link rel="prefetch" href="/blogs/assets/js/10.fe4c47f9.js"><link rel="prefetch" href="/blogs/assets/js/11.dd908459.js"><link rel="prefetch" href="/blogs/assets/js/12.54587b99.js"><link rel="prefetch" href="/blogs/assets/js/13.038df726.js"><link rel="prefetch" href="/blogs/assets/js/14.b915c5e3.js"><link rel="prefetch" href="/blogs/assets/js/15.91d78bbe.js"><link rel="prefetch" href="/blogs/assets/js/16.bedbf8eb.js"><link rel="prefetch" href="/blogs/assets/js/17.21fa881f.js"><link rel="prefetch" href="/blogs/assets/js/19.6720bf15.js"><link rel="prefetch" href="/blogs/assets/js/20.ad6b24d4.js"><link rel="prefetch" href="/blogs/assets/js/21.ce38fa1f.js"><link rel="prefetch" href="/blogs/assets/js/22.b6a2e5f4.js"><link rel="prefetch" href="/blogs/assets/js/23.de789a9c.js"><link rel="prefetch" href="/blogs/assets/js/24.e9dc27c1.js"><link rel="prefetch" href="/blogs/assets/js/25.694d62cf.js"><link rel="prefetch" href="/blogs/assets/js/26.0e4bc0a9.js"><link rel="prefetch" href="/blogs/assets/js/27.b440912a.js"><link rel="prefetch" href="/blogs/assets/js/28.f9df034d.js"><link rel="prefetch" href="/blogs/assets/js/29.69aefc84.js"><link rel="prefetch" href="/blogs/assets/js/30.65b0ab57.js"><link rel="prefetch" href="/blogs/assets/js/31.e870e5fa.js"><link rel="prefetch" href="/blogs/assets/js/32.cbe00e9b.js"><link rel="prefetch" href="/blogs/assets/js/33.8b3f5307.js"><link rel="prefetch" href="/blogs/assets/js/34.fe397ea9.js"><link rel="prefetch" href="/blogs/assets/js/35.e0c3167e.js"><link rel="prefetch" href="/blogs/assets/js/36.722c305e.js"><link rel="prefetch" href="/blogs/assets/js/37.a3826ac1.js"><link rel="prefetch" href="/blogs/assets/js/38.20045117.js"><link rel="prefetch" href="/blogs/assets/js/39.c90e352a.js"><link rel="prefetch" href="/blogs/assets/js/4.1c4947d4.js"><link rel="prefetch" href="/blogs/assets/js/40.4aaf72cd.js"><link rel="prefetch" href="/blogs/assets/js/41.6e49df1d.js"><link rel="prefetch" href="/blogs/assets/js/5.697c0192.js"><link rel="prefetch" href="/blogs/assets/js/6.abdb360e.js"><link rel="prefetch" href="/blogs/assets/js/7.370c90a6.js"><link rel="prefetch" href="/blogs/assets/js/8.4c57e106.js"><link rel="prefetch" href="/blogs/assets/js/9.97539394.js">
+    <link rel="stylesheet" href="/blogs/assets/css/0.styles.fec45b68.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-c81ee298><div data-v-c81ee298><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-c81ee298 data-v-c81ee298><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-5b8e0876 data-v-c81ee298 data-v-c81ee298><h3 class="title" style="display:none;" data-v-5b8e0876 data-v-5b8e0876>李享的中文印记</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-5b8e0876 data-v-5b8e0876><input type="password" value="" data-v-5b8e0876> <span data-v-5b8e0876>Konck! Knock!</span> <button data-v-5b8e0876>OK</button></label> <div class="footer" style="display:none;" data-v-5b8e0876 data-v-5b8e0876><span data-v-5b8e0876><i class="iconfont reco-theme" data-v-5b8e0876></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-5b8e0876>vuePress-theme-reco</a></span> <span data-v-5b8e0876><i class="iconfont reco-copyright" data-v-5b8e0876></i> <a data-v-5b8e0876><span data-v-5b8e0876>Li Xiang</span>
+            
+          <span data-v-5b8e0876>2019 - </span>
+          2021
+        </a></span></div></div> <div class="hide" data-v-c81ee298><header class="navbar" data-v-c81ee298><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blogs/" class="home-link router-link-active"><img src="/blogs/head.png" alt="李享的中文印记" class="logo"> <span class="site-name">李享的中文印记</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blogs/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/categories/Linux/" class="nav-link"><i class="iconfont undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/categories/Java/" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/categories/编辑器/" class="nav-link"><i class="iconfont undefined"></i>
+  编辑器
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/categories/其他/" class="nav-link"><i class="iconfont undefined"></i>
+  其他
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/categories/Python/" class="nav-link"><i class="iconfont undefined"></i>
+  Python
+</a></li></ul></div></div><div class="nav-item"><a href="/blogs/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blogs/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-c81ee298></div> <aside class="sidebar" data-v-c81ee298><div class="personal-info-wrapper" data-v-5641b559 data-v-c81ee298><img src="/blogs/head.png" alt="author-avatar" class="personal-img" data-v-5641b559> <h3 class="name" data-v-5641b559>
+    Li Xiang
+  </h3> <div class="num" data-v-5641b559><div data-v-5641b559><h3 data-v-5641b559>25</h3> <h6 data-v-5641b559>Article</h6></div> <div data-v-5641b559><h3 data-v-5641b559>24</h3> <h6 data-v-5641b559>Tag</h6></div></div> <hr data-v-5641b559></div> <nav class="nav-links"><div class="nav-item"><a href="/blogs/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blogs/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/categories/Linux/" class="nav-link"><i class="iconfont undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/categories/Java/" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/categories/编辑器/" class="nav-link"><i class="iconfont undefined"></i>
+  编辑器
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/categories/其他/" class="nav-link"><i class="iconfont undefined"></i>
+  其他
+</a></li><li class="dropdown-item"><!----> <a href="/blogs/categories/Python/" class="nav-link"><i class="iconfont undefined"></i>
+  Python
+</a></li></ul></div></div><div class="nav-item"><a href="/blogs/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blogs/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-5b8e0876 data-v-c81ee298><h3 class="title" style="display:none;" data-v-5b8e0876 data-v-5b8e0876>Linux(Centos7)安装jdk1.8</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-5b8e0876 data-v-5b8e0876><input type="password" value="" data-v-5b8e0876> <span data-v-5b8e0876>Konck! Knock!</span> <button data-v-5b8e0876>OK</button></label> <div class="footer" style="display:none;" data-v-5b8e0876 data-v-5b8e0876><span data-v-5b8e0876><i class="iconfont reco-theme" data-v-5b8e0876></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-5b8e0876>vuePress-theme-reco</a></span> <span data-v-5b8e0876><i class="iconfont reco-copyright" data-v-5b8e0876></i> <a data-v-5b8e0876><span data-v-5b8e0876>Li Xiang</span>
+            
+          <span data-v-5b8e0876>2019 - </span>
+          2021
+        </a></span></div></div> <div data-v-c81ee298><main class="page"><div class="page-title" style="display:none;"><h1>Linux(Centos7)安装jdk1.8</h1> <hr> <div data-v-7829ac55><i class="iconfont reco-account" data-v-7829ac55><span data-v-7829ac55>Li Xiang</span></i> <i class="iconfont reco-date" data-v-7829ac55><span data-v-7829ac55>2021-10-15</span></i> <!----> <i class="iconfont reco-tag tags" data-v-7829ac55><span class="tag-item" data-v-7829ac55>Linux</span><span class="tag-item" data-v-7829ac55>Centos7</span><span class="tag-item" data-v-7829ac55>JDK1.8</span></i></div></div> <div class="content__default"><h3 id="linux安装jdk-两种方式"><a href="#linux安装jdk-两种方式" class="header-anchor">#</a> Linux安装jdk(两种方式)</h3> <h4 id="_1-不管那一步都要查看系统是否自带jdk"><a href="#_1-不管那一步都要查看系统是否自带jdk" class="header-anchor">#</a> 1.   不管那一步都要查看系统是否自带jdk</h4> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 卸载系统自带的OpenJDK以及相关的java文件 </span>
+<span class="token comment"># java -version 结果 存在</span>
+<span class="token comment"># 查看相关java文件 rpm -qa | grep java</span>
+<span class="token comment"># 删除相关文件</span>
+  <span class="token function">rpm</span> -e --nodeps java-1.8.0-openjdk-headless-1.8.0.65-3.b17.el7.x86_64
+  <span class="token function">rpm</span> -e --nodeps java-1.8.0-openjdk-1.8.0.65-3.b17.el7.x86_64
+<span class="token comment"># 查看删除结果</span>
+  java -version
+
+</code></pre></div><h4 id="yum-安装jdk1-8"><a href="#yum-安装jdk1-8" class="header-anchor">#</a> yum 安装jdk1.8</h4> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment">#查询 jdk</span>
+    yum -y list java*
+</code></pre></div><ol><li>查询 jdk      yum -y list java*
+<img src="https://img.cnbuilder.cn/blog/b2199c2ec832189bc052a2fe99d3f1be.png" alt="dw"></li> <li>安装jdk1.8</li> <li>yum install -y java-1.8.0-openjdk.x86_64</li> <li>java -version</li> <li>这样就安装成功了。默认给安装到usr/lib/jvm/</li></ol> <h3 id="手动安装"><a href="#手动安装" class="header-anchor">#</a> 手动安装</h3> <ol><li>先去官网下载jdk1.8</li> <li><a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html" target="_blank" rel="noopener noreferrer">点我快速进入官网<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> <img src="https://img.cnbuilder.cn/blog/b58b387f6d9d120dcdf603d7ef740b60.png" alt="jdk"></li> <li>没有账号需要注册一下oracle账号。
+<img src="https://img.cnbuilder.cn/blog/22b2bb69449836b883b79e5232e85de7.png" alt="orcle"> <img src="https://img.cnbuilder.cn/blog/30190dbdf46ad9061cd66313f5090751.png" alt="orcle"></li> <li>第一次注册需要邮箱激活一下。
+<img src="https://img.cnbuilder.cn/blog/43f03de8df78085df815f73c2d7b064e.png" alt="激活"></li> <li>然后就可以用邮箱+密码直接登录。 登录完之后可以直接下载！
+<img src="F:%5Cpress-project%5Cmy-blog%5Cdocs%5Cviews%5Ccategory%5C2021-10%5Cttps:%5Cimg.cnbuilder.cn%5Cblog%5Ca827f3f1d1fe4d79e676a9b0dad01423.png" alt="jdk"></li> <li>服务器创建文件夹</li></ol> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment">#进入根目录</span>
+<span class="token builtin class-name">cd</span> / 
+<span class="token comment">#在根目录创建jdk目录</span>
+<span class="token function">mkdir</span> jdk
+</code></pre></div><ol start="7"><li>上传服务器
+<img src="https://img.cnbuilder.cn/blog/17ed2091594b95e98d509c6209c0c9b9.png" alt="jdk"></li> <li>上传完成：在jdk目录下ll查询一下
+<img src="https://img.cnbuilder.cn/blog/9e4d0b36afc29e5f0b17d028c28f6cd9.png" alt="jdk"></li> <li>解压jdk：
+<img src="https://img.cnbuilder.cn/blog/2911257ab0a4f08c8bc4ccd437f1db39.png" alt="jdk"></li> <li>命令tar -zxvf jdk-8u211-linux-x64.tar.gz（jdk-8..这个是刚下载的jdk名称）</li> <li>解压成功
+<img src="https://img.cnbuilder.cn/blog/4a258c463f0b48b8fa8524c0674b93b6.png" alt="jdk"></li> <li>配置环境变量 vim /etc/profile
+<img src="https://img.cnbuilder.cn/blog/38b4970cd0dc808242b78837f88626b1.png" alt="jdk"></li> <li>配置一下环境变量代码：
+<img src="https://img.cnbuilder.cn/blog/3c724dcd1aad89fd0dd8a83128aae568.png" alt="jdk"></li></ol> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment">#将以下命令放到环境变量 注意文件夹名称</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">JAVA_HOME</span><span class="token operator">=</span>/DATA/jdk/jdk1.8.0_211 
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">CLASSPATH</span><span class="token operator">=</span>$:CLASSPATH:<span class="token variable">$JAVA_HOME</span>/lib/ 
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span><span class="token builtin class-name">:</span><span class="token variable">$JAVA_HOME</span>/bin
+<span class="token comment">#点击esc 进入命令模式 输入：wq! 保存修改信息</span>
+</code></pre></div><p><img src="https://img.cnbuilder.cn/blog/728c14268b0f2a36cd558f1cbf6b2cb8.png" alt="jdk">
+14.   刷新环境变量文件： 刷新环境变量命令:source /etc/profile
+<img src="https://img.cnbuilder.cn/blog/740b8a257ab422b620bf2046eb5d52e0.png" alt="jdk">
+15.   查看是否安装成功: 查询jdk版本命令： java -version
+<img src="https://img.cnbuilder.cn/blog/f812303af87104b974a9bcc4f3f9c561.png" alt="jdk">
+16.   关于如果没有oracle账号的效果版可以看这里
+<a href="http://bugmenot.com/view/oracle.com" target="_blank" rel="noopener noreferrer">点我获取账号哦!<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-4c6a9144><li class="level-3" data-v-4c6a9144><a href="/blogs/views/category/2021-10/Linux(Centos7)%E5%AE%89%E8%A3%85jdk1.8.html#linux安装jdk-两种方式" class="sidebar-link" data-v-4c6a9144>Linux安装jdk(两种方式)</a></li><li class="level-3" data-v-4c6a9144><a href="/blogs/views/category/2021-10/Linux(Centos7)%E5%AE%89%E8%A3%85jdk1.8.html#手动安装" class="sidebar-link" data-v-4c6a9144>手动安装</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/blogs/assets/js/app.b55c9fd1.js" defer></script><script src="/blogs/assets/js/3.768e4e98.js" defer></script><script src="/blogs/assets/js/1.a77d753a.js" defer></script><script src="/blogs/assets/js/18.8b0d4994.js" defer></script>
+  </body>
+</html>
