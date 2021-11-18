@@ -8,3 +8,5 @@ package-lock.json
 lib
 libs
 dist
+deploy/*
+deploy

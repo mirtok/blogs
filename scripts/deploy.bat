@@ -8,7 +8,7 @@ git checkout -b master
 echo; 
 
 echo ��ʼ���ӱ����git add docs/* packages/*  deploy/* package.json REAMDE.md yarn.lock
-git add docs/* packages/*  deploy/* package.json REAMDE.md yarn.lock
+git add docs/* packages/*  deploy/* package.json REAMDE.md yarn.lock .gitignore scripts/* docs/.vuepress
 echo;
  
 set /p declation=�����ύ��commit��Ϣ:
@@ -21,7 +21,7 @@ echo;
  
  
 echo ���������ύ��Զ���Լ���֧��git push -u origin ph-pages:ph-pages
-git push -u origin ph-pages:ph-pages
+git push -u origin master:master
 echo;
  
 echo �л�����֧��git checkout master

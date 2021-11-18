@@ -9,8 +9,7 @@
     "scripts": {
         "dev": "vuepress dev docs",
         "build": "vuepress build docs",
-        "deploy": "yarn build && scripts/deploy.sh",
-        "deploy-gh": "yarn build && scripts/deploy-gh.sh"
+        "push": "node ./scripts/shell.js"
     },
     "keywords": [],
     "author": "",
@@ -18,5 +17,8 @@
     "devDependencies": {
         "vuepress": "^1.8.2",
         "vuepress-theme-reco": "^1.6.6"
+    },
+    "dependencies": {
+        "shelljs": "^0.8.4"
     }
 }
