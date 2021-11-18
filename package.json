@@ -1,0 +1,22 @@
+{
+    "name": "my-blog",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "directories": {
+        "doc": "docs"
+    },
+    "scripts": {
+        "dev": "vuepress dev docs",
+        "build": "vuepress build docs",
+        "deploy": "yarn build && scripts/deploy.sh",
+        "deploy-gh": "yarn build && scripts/deploy-gh.sh"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "vuepress": "^1.8.2",
+        "vuepress-theme-reco": "^1.6.6"
+    }
+}
