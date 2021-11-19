@@ -6,7 +6,7 @@ module.exports = {
         ['link', { rel: 'icon', href: '/lixiang.ico' }],
         ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
     ],
-    base: '/blogs/deploy/', // 部署到GitHub相关的配蛋 仓库名称
+    base: '/blogs/deploy', // 部署到GitHub相关的配蛋 仓库名称
     theme: require.resolve('../../packages/vuepress-theme-reco'), // 主题 theme: 'reco',
     themeConfig: {
         nav: [
