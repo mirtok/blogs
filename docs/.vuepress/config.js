@@ -3,7 +3,7 @@ module.exports = {
     description: '一款简洁而优雅的博客文章',
     dest: 'deploy', //打包路径
     head: [
-        ['link', { rel: 'icon', href: '/favicon.ico' }],
+        ['link', { rel: 'icon', href: '/lixiang.ico' }],
         ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
     ],
     base: '/blogs/deploy/', // 部署到GitHub相关的配蛋 仓库名称
@@ -55,8 +55,8 @@ module.exports = {
                 { icon: 'reco-npm', link: 'https://www.npmjs.com/package/vue-toastification-mini' }
             ]
         },
-        logo: '/head.png',
-        authorAvatar: '/head.png',
+        logo: '/lixiang.png',
+        authorAvatar: '/lixiang.png',
         // 搜索设置
         search: true,
         searchMaxSuggestions: 10,
